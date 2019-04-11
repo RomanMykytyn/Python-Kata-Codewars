@@ -1,0 +1,12 @@
+def dig_pow(n, p):
+    temp_str = str(n)
+    count = 0
+    result = 0
+    while count <= len(temp_str) - 1:
+        result = result + (int(temp_str[count]) ** p)
+        count = count + 1
+        p = p + 1
+    if result%n == 0:
+        return result / n
+    else:
+        return -1
