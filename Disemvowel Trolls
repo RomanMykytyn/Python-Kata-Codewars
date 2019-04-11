@@ -1,0 +1,6 @@
+def disemvowel(string):
+    temp_list = list(string)
+    for i in ["A","a","E","e","I","i","O","o","U","u"]:
+        while temp_list.count(i) > 0:
+            temp_list.remove(i)
+    return "".join(temp_list)
