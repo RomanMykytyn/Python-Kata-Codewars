@@ -1,0 +1,15 @@
+def get_sum(a,b):
+    #good luck!
+    if a == b:
+        return a
+    if a  > b:
+        max = a
+        min = b
+    else:
+        max = b
+        min = a
+    sum = min
+    while min < max:
+        sum = sum + (min + 1)
+        min = min + 1
+    return sum
