@@ -1,0 +1,8 @@
+def solution(number):
+  list_x = [0]
+  for i in range(3, number, 3):
+      list_x.append(i)
+  for i in range(5, number, 5):
+      if i%3 != 0:
+          list_x.append(i)
+  return sum(list_x)
