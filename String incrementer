@@ -1,0 +1,30 @@
+Your job is to write a function which increments a string, to create a new string. If the string already ends with a number, the number should be incremented by 1. If the string does not end with a number the number 1 should be appended to the new string.
+
+Examples:
+
+foo -> foo1
+
+foobar23 -> foobar24
+
+foo0042 -> foo0043
+
+foo9 -> foo10
+
+foo099 -> foo100
+
+Attention: If the number has leading zeros the amount of digits should be considered.
+
+def increment_string(strng):
+    if strng == "" or strng[-1].isdigit() == False:
+        return strng + "1"
+    count = ""
+    for i in strng[::-1]:
+        if i.isdigit() == True:
+            count += i
+        else:
+            break
+    count_2 = str( int(count[::-1]) + 1 )
+    if len(count) >= len(str(count_2)):
+        return strng[:-len(count_2)] + count_2
+    else:
+        return strng[:-len(count)] + count_2
